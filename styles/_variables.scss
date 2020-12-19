@@ -24,7 +24,8 @@ $gradient-abstract: linear-gradient(
 );
 $gradient-draw: linear-gradient(180deg, #7373ff 0%, #3b28ea 100%);
 
-$breakpoint-mobile: 576px;
-$breakpoint-tablet: 768px;
+$breakpoint-small-mobile: 576px;
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
 $breakpoint-laptop: 1366px;
 $breakpoint-desktop: 1680px;

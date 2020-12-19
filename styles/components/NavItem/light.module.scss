@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.link {
+  a {
+    color: $gray-7;
+    &:hover {
+      &::after {
+        background-color: $primary-2;
+      }
+    }
+  }
+}
