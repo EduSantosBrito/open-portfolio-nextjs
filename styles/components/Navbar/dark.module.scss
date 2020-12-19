@@ -1,0 +1,26 @@
+@import '../../variables';
+
+.content {
+  &.open {
+    background-color: $gray-7;
+  }
+}
+
+.logo {
+  content: url('/images/logo-dark.svg');
+}
+
+.icon {
+  &::before {
+    background-color: $white-1;
+  }
+  &::after {
+    background-color: $white-1;
+  }
+}
+
+.iconCTA {
+  img {
+    content: url('/icons/money-dark.svg');
+  }
+}
