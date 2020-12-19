@@ -1,0 +1,35 @@
+@import '../../variables';
+
+.container {
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+  }
+}
+
+.link {
+  a {
+    position: relative;
+    font-size: 1rem;
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      width: 0;
+      opacity: 0;
+      height: 3px;
+      position: absolute;
+      left: calc(100% - 30px);
+      right: 0;
+      bottom: -3px;
+      transition: width 350ms ease-in-out, opacity 300ms ease-in-out;
+    }
+    &:hover {
+      &::after {
+        width: 30px;
+        opacity: 1;
+      }
+    }
+  }
+}

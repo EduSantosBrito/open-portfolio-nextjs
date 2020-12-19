@@ -1,11 +1,24 @@
 @import '../../variables';
 
-.logo {
-  background-color: $primary-1;
+.container {
+  background-color: $gray-7;
 }
 
-.nav {
-  &_item {
-    background-color: $primary-2;
+.content {
+  &.open {
+    background-color: $gray-7;
+  }
+}
+
+.logo {
+  content: url('/images/logo-dark.svg');
+}
+
+.icon {
+  &::before {
+    background-color: $white-1;
+  }
+  &::after {
+    background-color: $white-1;
   }
 }
