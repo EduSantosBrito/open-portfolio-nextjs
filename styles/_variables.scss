@@ -23,3 +23,8 @@ $gradient-abstract: linear-gradient(
   rgba(226, 30, 226, 0) 80.43%
 );
 $gradient-draw: linear-gradient(180deg, #7373ff 0%, #3b28ea 100%);
+
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1366px;
+$breakpoint-desktop: 1680px;

@@ -1,10 +1,10 @@
-import styles from '@styles/Home.module.scss';
+import Header from '@components/Header';
 
 const Home = (): JSX.Element => {
   return (
-    <div className={styles.container}>
-      <div>home</div>
-    </div>
+    <>
+      <Header />
+    </>
   );
 };
 
