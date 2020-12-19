@@ -17,6 +17,9 @@
     @media screen and (min-width: $breakpoint-tablet) {
       font-size: 0.8rem;
     }
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 1rem;
+    }
     &::after {
       content: '';
       width: 0;

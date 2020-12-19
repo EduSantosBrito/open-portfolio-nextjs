@@ -9,4 +9,8 @@
   @media screen and (min-width: $breakpoint-tablet) {
     height: 70vh;
   }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    height: 60vh;
+  }
 }

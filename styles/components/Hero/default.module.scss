@@ -29,6 +29,35 @@
     position: absolute;
     width: 2rem;
   }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin: 0 auto;
+    max-width: $breakpoint-desktop;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      'title draw'
+      'subtitle draw'
+      'button draw';
+    gap: 0;
+    &::before {
+      margin-top: 0;
+      bottom: 0;
+      width: 3vw;
+    }
+    &::after {
+      width: 6vw;
+    }
+  }
+  @media screen and (min-width: $breakpoint-laptop) {
+    grid-template-columns: 1.5fr 1fr;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    &::before {
+      width: 2vw;
+    }
+  }
 }
 
 .title {
@@ -38,6 +67,13 @@
   grid-template-columns: 1fr 2fr;
   margin: 0;
   width: 100%;
+  &::before {
+    content: url('/abstracts/wave-line.svg');
+    position: fixed;
+    margin-top: 16px;
+    left: 0;
+    width: 80%;
+  }
   @media screen and (min-width: $breakpoint-small-mobile) {
     grid-template-columns: 1.3fr 2fr;
     width: 100%;
@@ -45,13 +81,19 @@
   @media screen and (min-width: $breakpoint-mobile) {
     width: 80%;
   }
-
-  &::before {
-    content: url('/abstracts/wave-line.svg');
-    position: fixed;
-    margin-top: 16px;
-    left: 0;
-    width: 80%;
+  @media screen and (min-width: $breakpoint-tablet) {
+    grid-area: title;
+    justify-self: center;
+    align-self: flex-end;
+    &::before {
+      width: 40vw;
+    }
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    grid-template-columns: 1.1fr 2fr;
+    &::before {
+      width: 25vw;
+    }
   }
 }
 
@@ -64,6 +106,15 @@
   font-size: 1rem;
   @media screen and (min-width: $breakpoint-small-mobile) {
     width: 80%;
+  }
+  @media screen and (min-width: $breakpoint-tablet) {
+    grid-area: subtitle;
+    justify-self: center;
+    align-self: center;
+    text-align: justify;
+  }
+  @media screen and (min-width: $breakpoint-laptop) {
+    width: 55%;
   }
 }
 
@@ -113,4 +164,24 @@
 .draw {
   position: relative;
   margin: 32px 0px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    grid-area: draw;
+    justify-self: flex-start;
+    align-self: center;
+  }
+}
+
+.button {
+  @media screen and (min-width: $breakpoint-tablet) {
+    grid-area: button;
+    display: flex;
+    justify-self: center;
+    align-self: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+  }
+  @media screen and (min-width: $breakpoint-laptop) {
+    width: 55%;
+  }
 }
