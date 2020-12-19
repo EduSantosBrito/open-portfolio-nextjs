@@ -1,0 +1,20 @@
+@import '../../variables';
+
+.button {
+  cursor: pointer;
+  outline: none;
+  background-color: $primary-2;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: $white-1;
+  transition: background-color 200ms ease-in-out;
+  &:hover {
+    background-color: $primary-3;
+  }
+}

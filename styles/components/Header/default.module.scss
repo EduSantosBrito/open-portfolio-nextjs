@@ -23,7 +23,7 @@
   }
   @media screen and (min-width: $breakpoint-tablet) {
     max-width: $breakpoint-desktop;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
   }
 }
 
@@ -76,6 +76,10 @@
 }
 
 .iconCTA {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  outline: none;
   align-self: center;
   justify-self: flex-end;
   &.open {

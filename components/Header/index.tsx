@@ -1,3 +1,4 @@
+import Button from '@components/Button';
 import NavItem from '@components/NavItem';
 import { useTheme } from '@contexts/ThemeContext';
 import darkModeStyle from '@styles/components/Header/dark.module.scss';
@@ -31,9 +32,10 @@ const Header = (): JSX.Element => {
           className={`${styles.logo} ${open ? styles.open : ''}`}
           alt='Logo description'
         />
-        <div className={`${styles.iconCTA} ${open ? styles.open : ''}`}>
-          icon2
-        </div>
+        <button className={`${styles.iconCTA} ${open ? styles.open : ''}`}>
+          <img alt='Icon dollar' />
+        </button>
+
         <div className={`${styles.nav} ${open ? styles.open : ''}`}>
           <NavItem
             label='switch'
@@ -50,8 +52,14 @@ const Header = (): JSX.Element => {
           <NavItem label='Sobre mim' to='#about' />
           <NavItem label='Projetos' to='#projects' />
           <NavItem
-            label='Orçamento'
-            render={<button className={styles.buttonCTA}>Orcamento</button>}
+            render={
+              <Button
+                className={styles.buttonCTA}
+                onClick={() => console.warn('Falta handle do orçamento navbar')}
+              >
+                Orçamento
+              </Button>
+            }
           />
         </div>
       </div>
