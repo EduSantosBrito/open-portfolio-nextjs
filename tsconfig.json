@@ -16,7 +16,10 @@
     "strict": true,
     "paths": {
       "@styles/*": ["styles/*"],
-      "@api/*": ["pages/api/*"]
+      "@api/*": ["pages/api/*"],
+      "@components/*": ["components/*"],
+      "@contexts/*": ["contexts/*"],
+      "@utils/*": ["utils/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.logo {
+  background-color: $primary-1;
+}
+
+.nav {
+  &_item {
+    background-color: $primary-2;
+  }
+}
