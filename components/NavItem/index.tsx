@@ -11,7 +11,7 @@ const themes = {
   LIGHT: lightModeStyle,
 };
 
-type NavItemProps = { label: string; to?: string; render?: JSX.Element };
+type NavItemProps = { label?: string; to?: string; render?: JSX.Element };
 
 const NavItem: FC<NavItemProps> = ({ label, to, render }): JSX.Element => {
   const { theme } = useTheme();
