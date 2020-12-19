@@ -58,10 +58,11 @@ const Hero: FC = (): JSX.Element => {
         </div>
       </h1>
       <p className={styles.subtitle}>
-        Olá, meu nome é Daibert sou UX/UI Designer com foco em soluções digitais
+        Olá, meu nome é Brito sou UX/UI Designer com foco em soluções digitais
         pensando sempre na experiência do usuário.
       </p>
       <Button onClick={() => console.warn('know more')}>Saiba mais</Button>
+      <img className={styles.draw} alt='draw with a wireframe' />
     </div>
   );
 };
