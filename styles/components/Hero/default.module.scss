@@ -1,0 +1,87 @@
+@import '../../variables';
+@import '../../keyframes';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Poppins, sans-serif;
+  font-size: 2rem;
+  padding: 0.5rem;
+  gap: 1rem;
+
+  @media screen and (max-width: $breakpoint-small-mobile) {
+    font-size: 1.3rem;
+  }
+}
+
+.title {
+  display: grid;
+  column-gap: 8px;
+  grid-template-columns: 1fr 2fr;
+  margin: 0;
+  width: 100%;
+  @media screen and (min-width: $breakpoint-small-mobile) {
+    grid-template-columns: 1.3fr 2fr;
+    width: 100%;
+  }
+  @media screen and (min-width: $breakpoint-mobile) {
+    width: 80%;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  width: 100%;
+  color: $gray-2;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1rem;
+  @media screen and (min-width: $breakpoint-small-mobile) {
+    width: 80%;
+  }
+}
+
+.fixed {
+  justify-self: flex-end;
+}
+
+.dynamic {
+  height: 100%;
+  flex: 1;
+  background-clip: text;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  animation: none;
+}
+
+.designs {
+  animation: fadeIn 500ms ease-in-out;
+  background-image: $gradient-design;
+}
+
+.designs__static {
+  background-image: $gradient-design;
+}
+
+.systems {
+  animation: fadeIn 500ms ease-in-out;
+  background-image: $gradient-system;
+}
+
+.systems__static {
+  background-image: $gradient-system;
+}
+
+.websites {
+  animation: fadeIn 500ms ease-in-out;
+  background-image: $gradient-website;
+}
+
+.websites__static {
+  background-image: $gradient-website;
+}

@@ -12,8 +12,11 @@
 .link {
   a {
     position: relative;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
+    @media screen and (min-width: $breakpoint-tablet) {
+      font-size: 0.8rem;
+    }
     &::after {
       content: '';
       width: 0;
