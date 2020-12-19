@@ -5,7 +5,7 @@ type Style = {
 export const mergeStyles = (firstStyle: Style, secondStyle: Style): Style => {
   const secondStyleEntries = Object.entries(secondStyle);
   return Object.fromEntries(
-    Object.entries(firstStyle).reduce<[string, string][]>(
+    Object.entries(firstStyle).reduce<Array<[string, string]>>(
       (accumulator, [key, value]) => {
         const secondStyleConflicted = secondStyleEntries.find(
           ([entryKey]) => entryKey === key,
