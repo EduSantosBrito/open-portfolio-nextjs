@@ -61,7 +61,9 @@ const Hero: FC = (): JSX.Element => {
         Olá, meu nome é Brito sou UX/UI Designer com foco em soluções digitais
         pensando sempre na experiência do usuário.
       </p>
-      <Button onClick={() => console.warn('know more')}>Saiba mais</Button>
+      <div className={styles.button}>
+        <Button onClick={() => console.warn('know more')}>Saiba mais</Button>
+      </div>
       <img className={styles.draw} alt='draw with a wireframe' />
     </div>
   );

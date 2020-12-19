@@ -22,7 +22,10 @@
   }
   @media screen and (min-width: $breakpoint-tablet) {
     max-width: $breakpoint-desktop;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: $breakpoint-laptop) {
+    grid-template-columns: 1.5fr 1fr;
   }
 }
 
@@ -122,6 +125,7 @@
   }
   @media screen and (min-width: $breakpoint-tablet) {
     display: flex;
+    gap: 8px;
   }
 }
 
