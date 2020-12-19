@@ -14,9 +14,25 @@
   @media screen and (max-width: $breakpoint-small-mobile) {
     font-size: 1.3rem;
   }
+  &::before {
+    content: url('/abstracts/cross.svg');
+    margin-top: 16px;
+    left: 24px;
+    position: absolute;
+    width: 2rem;
+  }
+  &::after {
+    content: url('/abstracts/bubbles.svg');
+    margin-top: 16px;
+    right: 24px;
+    bottom: 0;
+    position: absolute;
+    width: 2rem;
+  }
 }
 
 .title {
+  position: relative;
   display: grid;
   column-gap: 8px;
   grid-template-columns: 1fr 2fr;
@@ -27,6 +43,14 @@
     width: 100%;
   }
   @media screen and (min-width: $breakpoint-mobile) {
+    width: 80%;
+  }
+
+  &::before {
+    content: url('/abstracts/wave-line.svg');
+    position: fixed;
+    margin-top: 16px;
+    left: 0;
     width: 80%;
   }
 }
@@ -87,5 +111,6 @@
 }
 
 .draw {
+  position: relative;
   margin: 32px 0px;
 }
