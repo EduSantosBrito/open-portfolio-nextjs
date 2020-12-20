@@ -14,7 +14,7 @@ const themes = {
 };
 
 const Navbar = (): JSX.Element => {
-  const { theme, switchTheme } = useTheme();
+  const { theme } = useTheme();
   const [open, setOpen] = useState(false);
 
   const styles = useMemo(() => {
