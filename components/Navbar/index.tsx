@@ -1,5 +1,6 @@
 import Button from '@components/Button';
 import NavItem from '@components/NavItem';
+import ThemeToggle from '@components/ThemeToggle';
 import { useTheme } from '@contexts/ThemeContext';
 import darkModeStyle from '@styles/components/Navbar/dark.module.scss';
 import defaultStyle from '@styles/components/Navbar/default.module.scss';
@@ -40,12 +41,9 @@ const Navbar = (): JSX.Element => {
           <NavItem
             label='switch'
             render={
-              <button
+              <ThemeToggle
                 className={`${styles.buttonTheme} ${open ? styles.open : ''}`}
-                onClick={() => switchTheme()}
-              >
-                switch
-              </button>
+              />
             }
           />
           <NavItem label='Home' to='#' />
