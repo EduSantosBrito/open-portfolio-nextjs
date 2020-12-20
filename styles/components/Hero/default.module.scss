@@ -2,6 +2,7 @@
 @import '../../keyframes';
 
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,14 +22,6 @@
     position: absolute;
     width: 2rem;
   }
-  &::after {
-    content: url('/abstracts/bubbles.svg');
-    margin-top: 16px;
-    right: 24px;
-    bottom: 0;
-    position: absolute;
-    width: 2rem;
-  }
 
   @media screen and (min-width: $breakpoint-tablet) {
     margin: 0 auto;
@@ -43,11 +36,11 @@
     gap: 0;
     &::before {
       margin-top: 0;
-      bottom: 0;
+      left: unset;
+      right: 24px;
+      bottom: unset;
+      top: 32px;
       width: 3vw;
-    }
-    &::after {
-      width: 6vw;
     }
   }
   @media screen and (min-width: $breakpoint-laptop) {

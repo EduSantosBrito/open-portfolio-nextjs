@@ -6,11 +6,32 @@
   height: 100vh;
   position: relative;
 
-  @media screen and (min-width: $breakpoint-tablet) {
-    height: 70vh;
+  &::after {
+    content: url('/abstracts/bubbles.svg');
+    margin-top: 1rem;
+    right: 2rem;
+    bottom: 0;
+    position: absolute;
+    width: 3rem;
   }
 
-  @media screen and (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: $breakpoint-tablet) {
     height: 60vh;
+    &::after {
+      right: 5rem;
+      width: 6rem;
+      bottom: -1.6rem;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-laptop) {
+    &::before {
+      content: url('/abstracts/dots.svg');
+      margin-top: 1rem;
+      position: absolute;
+      left: 0;
+      bottom: -1.6rem;
+      width: 6rem;
+    }
   }
 }
