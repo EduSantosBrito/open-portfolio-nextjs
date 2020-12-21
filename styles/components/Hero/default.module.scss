@@ -54,7 +54,6 @@
 }
 
 .title {
-  position: relative;
   display: grid;
   column-gap: 8px;
   grid-template-columns: 1fr 2fr;
@@ -62,9 +61,10 @@
   width: 100%;
   &::before {
     content: url('/abstracts/wave-line.svg');
-    position: fixed;
+    position: absolute;
     margin-top: 16px;
     left: 0;
+    top: 0;
     width: 80%;
   }
   @media screen and (min-width: $breakpoint-small-mobile) {

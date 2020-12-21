@@ -10,6 +10,11 @@
 }
 
 .link {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
   a {
     position: relative;
     font-size: 1.3rem;

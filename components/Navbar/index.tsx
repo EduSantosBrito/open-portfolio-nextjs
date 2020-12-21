@@ -39,16 +39,23 @@ const Navbar = (): JSX.Element => {
 
         <div className={`${styles.nav} ${open ? styles.open : ''}`}>
           <NavItem
-            label='switch'
             render={
               <ThemeToggle
                 className={`${styles.buttonTheme} ${open ? styles.open : ''}`}
               />
             }
           />
-          <NavItem label='Home' to='#' />
-          <NavItem label='Sobre mim' to='#about' />
-          <NavItem label='Projetos' to='#projects' />
+          <NavItem onClick={() => open && setOpen(!open)} label='Home' to='#' />
+          <NavItem
+            onClick={() => open && setOpen(!open)}
+            label='Sobre mim'
+            to='#about'
+          />
+          <NavItem
+            onClick={() => open && setOpen(!open)}
+            label='Projetos'
+            to='#projects'
+          />
           <NavItem
             render={
               <Button

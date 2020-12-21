@@ -1,0 +1,87 @@
+@import '../../variables';
+
+.container {
+  padding: 1.5rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+
+  &::after {
+    content: url('/abstracts/circle.svg');
+    width: 5rem;
+    position: absolute;
+    right: 0;
+    bottom: -3rem;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 2rem;
+    left: 0;
+    bottom: -3px;
+    background-color: $primary-2;
+  }
+}
+
+.description {
+  font-size: 0.8rem;
+  text-align: center;
+  @media screen and (min-width: $breakpoint-mobile) {
+    width: 60%;
+  }
+}
+
+.social {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  > img {
+    display: block;
+    width: 1.3rem;
+    height: auto;
+  }
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 300px;
+  position: relative;
+  &::before {
+    content: url('/abstracts/dots.svg');
+    position: absolute;
+    left: -3rem;
+    top: 2rem;
+    width: 5rem;
+    z-index: 1;
+  }
+  @media screen and (min-width: $breakpoint-laptop) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  position: relative;
+}

@@ -62,7 +62,15 @@ const Hero: FC = (): JSX.Element => {
         pensando sempre na experiência do usuário.
       </p>
       <div className={styles.button}>
-        <Button onClick={() => console.warn('know more')}>Saiba mais</Button>
+        <Button
+          onClick={() =>
+            typeof window !== 'undefined'
+              ? (window.location.href = '/#about')
+              : null
+          }
+        >
+          Saiba mais
+        </Button>
       </div>
       <img className={styles.draw} alt='draw with a wireframe' />
     </div>

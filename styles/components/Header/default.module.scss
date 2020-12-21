@@ -13,6 +13,8 @@
     bottom: 0;
     position: absolute;
     width: 3rem;
+    bottom: -1.2rem;
+    z-index: 1;
   }
 
   @media screen and (min-width: $breakpoint-tablet) {
@@ -32,6 +34,7 @@
       left: 0;
       bottom: -1.6rem;
       width: 6rem;
+      z-index: 1;
     }
   }
 }
