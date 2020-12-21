@@ -17,6 +17,21 @@
     right: 0;
     bottom: -3rem;
   }
+
+  @media screen and (min-width: $breakpoint-laptop) {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      'image title'
+      'image description'
+      'image social';
+    column-gap: 3rem;
+    &::after {
+        width: 10rem;
+    }
+  }
 }
 
 .title {
@@ -33,6 +48,11 @@
     bottom: -3px;
     background-color: $primary-2;
   }
+  @media screen and (min-width: $breakpoint-laptop) {
+    grid-area: title;
+    justify-self: flex-start;
+    align-self: flex-end;
+  }
 }
 
 .description {
@@ -40,6 +60,11 @@
   text-align: center;
   @media screen and (min-width: $breakpoint-mobile) {
     width: 60%;
+  }
+  @media screen and (min-width: $breakpoint-laptop) {
+    grid-area: description;
+    text-align: left;
+    font-size: 1rem;
   }
 }
 
@@ -49,6 +74,12 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  @media screen and (min-width: $breakpoint-laptop) {
+    grid-area: social;
+    justify-self: flex-start;
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
 }
 
 .icon {
@@ -75,6 +106,9 @@
     z-index: 1;
   }
   @media screen and (min-width: $breakpoint-laptop) {
+    grid-area: image;
+    width: 100%;
+    max-width: 100%;
     &::before {
       display: none;
     }
