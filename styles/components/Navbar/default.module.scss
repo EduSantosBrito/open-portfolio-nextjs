@@ -22,10 +22,10 @@
   }
   @media screen and (min-width: $breakpoint-tablet) {
     max-width: $breakpoint-desktop;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.3fr;
   }
   @media screen and (min-width: $breakpoint-laptop) {
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.1fr 1fr;
   }
 }
 
