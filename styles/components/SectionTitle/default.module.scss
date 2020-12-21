@@ -1,0 +1,22 @@
+@import '../../variables';
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 2rem;
+    left: 0;
+    bottom: -3px;
+    background-color: $primary-2;
+  }
+  @media screen and (min-width: $breakpoint-laptop) {
+    grid-area: title;
+    justify-self: flex-start;
+    align-self: flex-end;
+  }
+}

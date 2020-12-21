@@ -1,0 +1,28 @@
+import { useTheme } from '@contexts/ThemeContext';
+import darkModeStyle from '@styles/components/SectionTitle/dark.module.scss';
+import defaultStyle from '@styles/components/SectionTitle/default.module.scss';
+import lightModeStyle from '@styles/components/SectionTitle/light.module.scss';
+import { mergeStyles } from '@utils/mergeStyles';
+import { FC, useMemo } from 'react';
+
+type SectionTitleProps = {
+  label: string;
+};
+
+const themes = {
+  DARK: darkModeStyle,
+  LIGHT: lightModeStyle,
+};
+
+const SectionTitle: FC<SectionTitleProps> = ({ label }): JSX.Element => {
+  const { theme } = useTheme();
+
+  const styles = useMemo(() => {
+    const themeStyle = themes[theme];
+    return mergeStyles(defaultStyle, themeStyle);
+  }, [theme]);
+
+  return <h2 className={styles.title}>{label}</h2>;
+};
+
+export default SectionTitle;

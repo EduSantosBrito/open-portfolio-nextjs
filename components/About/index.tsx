@@ -1,3 +1,4 @@
+import SectionTitle from '@components/SectionTitle';
 import { useTheme } from '@contexts/ThemeContext';
 import darkModeStyle from '@styles/components/About/dark.module.scss';
 import defaultStyle from '@styles/components/About/default.module.scss';
@@ -20,7 +21,7 @@ const About: FC = (): JSX.Element => {
 
   return (
     <div id='about' className={styles.container}>
-      <h2 className={styles.title}>Sobre mim</h2>
+      <SectionTitle label='Sobre mim' />
       <div className={styles.description}>
         <p>
           Minha especialidade é projetar aplicativos móveis, sites e sistemas de
