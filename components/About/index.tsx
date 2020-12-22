@@ -3,7 +3,7 @@ import { useTheme } from '@contexts/ThemeContext';
 import darkModeStyle from '@styles/components/About/dark.module.scss';
 import defaultStyle from '@styles/components/About/default.module.scss';
 import lightModeStyle from '@styles/components/About/light.module.scss';
-import { mergeStyles } from '@utils/mergeStyles';
+import { mergeStyles } from 'merge-style-modules';
 import { FC, useMemo } from 'react';
 
 const themes = {

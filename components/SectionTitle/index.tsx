@@ -2,7 +2,7 @@ import { useTheme } from '@contexts/ThemeContext';
 import darkModeStyle from '@styles/components/SectionTitle/dark.module.scss';
 import defaultStyle from '@styles/components/SectionTitle/default.module.scss';
 import lightModeStyle from '@styles/components/SectionTitle/light.module.scss';
-import { mergeStyles } from '@utils/mergeStyles';
+import { mergeStyles } from 'merge-style-modules';
 import { FC, useMemo } from 'react';
 
 type SectionTitleProps = {

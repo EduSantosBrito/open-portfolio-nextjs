@@ -5,7 +5,7 @@ import { useTheme } from '@contexts/ThemeContext';
 import darkModeStyle from '@styles/components/Navbar/dark.module.scss';
 import defaultStyle from '@styles/components/Navbar/default.module.scss';
 import lightModeStyle from '@styles/components/Navbar/light.module.scss';
-import { mergeStyles } from '@utils/mergeStyles';
+import { mergeStyles } from 'merge-style-modules';
 import { useMemo, useState } from 'react';
 
 const themes = {

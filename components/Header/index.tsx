@@ -4,7 +4,7 @@ import { useTheme } from '@contexts/ThemeContext';
 import darkModeStyle from '@styles/components/Header/dark.module.scss';
 import defaultStyle from '@styles/components/Header/default.module.scss';
 import lightModeStyle from '@styles/components/Header/light.module.scss';
-import { mergeStyles } from '@utils/mergeStyles';
+import { mergeStyles } from 'merge-style-modules';
 import { FC, useMemo } from 'react';
 
 const themes = {

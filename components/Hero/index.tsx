@@ -3,7 +3,7 @@ import { useTheme } from '@contexts/ThemeContext';
 import darkModeStyle from '@styles/components/Hero/dark.module.scss';
 import defaultStyle from '@styles/components/Hero/default.module.scss';
 import lightModeStyle from '@styles/components/Hero/light.module.scss';
-import { mergeStyles } from '@utils/mergeStyles';
+import { mergeStyles } from 'merge-style-modules';
 import { FC, useEffect, useMemo, useState } from 'react';
 
 const themes = {

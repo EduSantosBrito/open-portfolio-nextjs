@@ -4661,6 +4661,11 @@ merge-stream@^2.0.0:
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
   integrity sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==
 
+merge-style-modules@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/merge-style-modules/-/merge-style-modules-1.0.0.tgz#c622553b15640b7382007459f21ec64804a9aee4"
+  integrity sha512-jwWuvrffFF1cHIFnkCgoviXLtS4jCUNyAMNgnuo1EeR0EH94jVO6pfzd7foFknm3H8Ky5w8VVizzY+HrPDNsog==
+
 merge2@^1.3.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
