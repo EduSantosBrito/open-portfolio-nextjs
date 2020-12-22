@@ -21,7 +21,7 @@
   @media screen and (min-width: $breakpoint-laptop) {
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.2fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
       'image title'
@@ -29,8 +29,16 @@
       'image social';
     column-gap: 3rem;
     &::after {
-        width: 10rem;
+      width: 10rem;
     }
+  }
+}
+
+.title {
+  @media screen and (min-width: $breakpoint-laptop) {
+    grid-area: title;
+    justify-self: flex-start;
+    align-self: flex-end;
   }
 }
 
@@ -63,8 +71,10 @@
 
 .icon {
   appearance: none;
-  outline: none;
+  border: none;
   cursor: pointer;
+  outline: none;
+  background-color: transparent;
   > img {
     display: block;
     width: 1.3rem;

@@ -1,0 +1,20 @@
+@import '../../variables';
+
+.icon {
+  background-color: $white-2;
+  > p {
+    color: $gray-5;
+  }
+}
+
+.web {
+  content: url('/icons/web-light.svg');
+}
+
+.ui {
+  content: url('/icons/ui-light.svg');
+}
+
+.active {
+  background-color: $white-3;
+}

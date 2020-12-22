@@ -14,9 +14,4 @@
     bottom: -3px;
     background-color: $primary-2;
   }
-  @media screen and (min-width: $breakpoint-laptop) {
-    grid-area: title;
-    justify-self: flex-start;
-    align-self: flex-end;
-  }
 }

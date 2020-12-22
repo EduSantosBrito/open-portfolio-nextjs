@@ -21,7 +21,7 @@ const About: FC = (): JSX.Element => {
 
   return (
     <div id='about' className={styles.container}>
-      <SectionTitle label='Sobre mim' />
+      <SectionTitle label='Sobre mim' className={styles.title} />
       <div className={styles.description}>
         <p>
           Minha especialidade é projetar aplicativos móveis, sites e sistemas de

@@ -7,6 +7,7 @@ import { FC, useMemo } from 'react';
 
 type SectionTitleProps = {
   label: string;
+  className?: string;
 };
 
 const themes = {
@@ -14,7 +15,10 @@ const themes = {
   LIGHT: lightModeStyle,
 };
 
-const SectionTitle: FC<SectionTitleProps> = ({ label }): JSX.Element => {
+const SectionTitle: FC<SectionTitleProps> = ({
+  label,
+  className,
+}): JSX.Element => {
   const { theme } = useTheme();
 
   const styles = useMemo(() => {
@@ -22,7 +26,7 @@ const SectionTitle: FC<SectionTitleProps> = ({ label }): JSX.Element => {
     return mergeStyles(defaultStyle, themeStyle);
   }, [theme]);
 
-  return <h2 className={styles.title}>{label}</h2>;
+  return <h2 className={`${styles.title} ${className}`}>{label}</h2>;
 };
 
 export default SectionTitle;

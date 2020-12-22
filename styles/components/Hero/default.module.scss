@@ -28,7 +28,7 @@
     max-width: $breakpoint-desktop;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
       'title draw'
       'subtitle draw'
@@ -71,9 +71,6 @@
     grid-template-columns: 1.3fr 2fr;
     width: 100%;
   }
-  @media screen and (min-width: $breakpoint-mobile) {
-    width: 80%;
-  }
   @media screen and (min-width: $breakpoint-tablet) {
     grid-area: title;
     justify-self: center;
@@ -84,6 +81,7 @@
   }
   @media screen and (min-width: $breakpoint-desktop) {
     grid-template-columns: 1.1fr 2fr;
+    width: 80%;
     &::before {
       width: 25vw;
     }
