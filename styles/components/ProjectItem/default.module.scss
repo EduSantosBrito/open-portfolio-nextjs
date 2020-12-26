@@ -7,14 +7,16 @@
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  // I DO NOT WANTED TO DO THIS, PLEASE FORGIVE ME
-  &:nth-child(even) {
-    margin-top: 100px;
-    align-self: flex-end;
-  }
-  &:nth-child(odd) {
-    margin-top: -100px;
-    align-self: flex-start;
+  @media screen and (min-width: $breakpoint-tablet) {
+    // I DO NOT WANTED TO DO THIS, PLEASE FORGIVE ME
+    &:nth-child(even) {
+      margin-top: 100px;
+      align-self: flex-end;
+    }
+    &:nth-child(odd) {
+      margin-top: -100px;
+      align-self: flex-start;
+    }
   }
 }
 
