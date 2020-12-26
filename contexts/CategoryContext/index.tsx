@@ -22,7 +22,6 @@ export const CategoryProvider: FC = ({ children }): JSX.Element => {
 
   const value: CategoryState = useMemo(() => ({ category, setCategory }), [
     category,
-    setCategory,
   ]);
 
   return (

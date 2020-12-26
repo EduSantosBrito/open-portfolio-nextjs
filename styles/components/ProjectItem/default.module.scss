@@ -1,0 +1,73 @@
+@import '../../variables';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  // I DO NOT WANTED TO DO THIS, PLEASE FORGIVE ME
+  &:nth-child(even) {
+    margin-top: 100px;
+    align-self: flex-end;
+  }
+  &:nth-child(odd) {
+    margin-top: -100px;
+    align-self: flex-start;
+  }
+}
+
+.image {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 400px;
+}
+
+.content {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 1rem;
+}
+
+.chip {
+  padding: 0.3rem 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+  > div {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+.link {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.icon {
+  height: 0.8rem;
+}

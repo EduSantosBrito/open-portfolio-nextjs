@@ -1,0 +1,22 @@
+@import '../../variables';
+
+.content {
+  background-color: $gray-4;
+}
+
+.chip {
+  color: $white-1;
+  background-color: $primary-1;
+}
+
+.title {
+  color: $white-3;
+}
+
+.description {
+  color: $gray-2;
+}
+
+.link {
+  color: $white-1;
+}
