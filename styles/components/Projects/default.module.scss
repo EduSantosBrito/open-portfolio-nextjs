@@ -13,11 +13,39 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 4rem;
+  position: relative;
+  z-index: 5;
+
+  &::before {
+    content: url('/abstracts/circles.svg');
+    position: absolute;
+    top: 500px;
+    z-index: -1;
+    left: -40px;
+    width: 80px;
+  }
 
   @media screen and (min-width: $breakpoint-tablet) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     row-gap: 2rem;
     margin-top: 100px;
+
+    &::after {
+      content: url('/abstracts/triangles.svg');
+      position: absolute;
+      top: -100px;
+      right: 0;
+      width: 70px;
+    }
+
+    &::before {
+      content: url('/abstracts/circles.svg');
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      left: -50px;
+      width: 80px;
+    }
   }
 }

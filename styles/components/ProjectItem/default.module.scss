@@ -7,6 +7,30 @@
   flex-direction: column;
   width: 100%;
   max-width: 500px;
+  position: relative;
+
+  &:nth-child(3) {
+    &::before {
+      content: url('/abstracts/blue-wave-line.svg');
+      position: absolute;
+      right: -5%;
+      bottom: -60px;
+      width: 90%;
+      z-index: -1;
+    }
+  }
+
+  &:nth-child(5) {
+    &::before {
+      content: url('/abstracts/bar.svg');
+      position: absolute;
+      left: -15px;
+      bottom: -15px;
+      width: 40px;
+      z-index: -1;
+    }
+  }
+
   @media screen and (min-width: $breakpoint-tablet) {
     // I DO NOT WANTED TO DO THIS, PLEASE FORGIVE ME
     &:nth-child(even) {
@@ -16,6 +40,49 @@
     &:nth-child(odd) {
       margin-top: -100px;
       align-self: flex-start;
+    }
+    &:nth-child(3) {
+      &::before {
+        content: url('/abstracts/triangle-gradient.svg');
+        right: -30px;
+        bottom: 120px;
+        width: 60px;
+        z-index: -1;
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        content: url('/abstracts/blue-wave-line.svg');
+        position: absolute;
+        right: -5%;
+        bottom: -60px;
+        width: 90%;
+        z-index: -1;
+      }
+    }
+    &:nth-child(5) {
+      &::before {
+        content: url('/abstracts/bar.svg');
+        position: absolute;
+        left: -80px;
+        bottom: unset;
+        top: -40px;
+        width: 40px;
+        z-index: -1;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-laptop) {
+    &:nth-child(6) {
+      &::before {
+        content: url('/abstracts/bubbles-circle.svg');
+        position: absolute;
+        top: 20px;
+        right: -130px;
+        width: 130px;
+        z-index: -1;
+      }
     }
   }
 }
