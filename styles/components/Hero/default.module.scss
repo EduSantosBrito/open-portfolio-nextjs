@@ -25,6 +25,7 @@
 
   @media screen and (min-width: $breakpoint-tablet) {
     margin: 0 auto;
+    margin-top: 2rem;
     max-width: $breakpoint-desktop;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
