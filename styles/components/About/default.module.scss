@@ -85,6 +85,9 @@
 .wrapper {
   width: 80%;
   max-width: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   position: relative;
   &::before {
     content: url('/abstracts/dots.svg');
@@ -106,5 +109,8 @@
 
 .image {
   width: 100%;
+  @media screen and (min-width: $breakpoint-laptop) {
+    width: 55%;
+  }
   position: relative;
 }

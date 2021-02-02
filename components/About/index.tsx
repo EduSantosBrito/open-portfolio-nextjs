@@ -29,17 +29,6 @@ const About: FC = (): JSX.Element => {
           em todos os tipos de projetos, seguimentos e clientes, de pequenas
           startups a grandes corporações.
         </p>
-        <p>
-          Você pode me pegar ouvindo minha música favorita Falling do Harry
-          Styles, postando alguns designs no Behance, praticando minha escrita
-          no Medium, aprendendo e ensinando no meu canal do Youtube, vamos ficar
-          mais próximos também no Instagram, acompanhe minha carreira
-          profissional no Linkedin e em casa fazendo um belo hambúrguer
-          artesanal.{' '}
-          <span role='img' aria-label='horn hand icon'>
-            🤘
-          </span>
-        </p>
       </div>
       <div className={styles.social}>
         <a
