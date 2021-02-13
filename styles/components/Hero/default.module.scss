@@ -15,24 +15,27 @@
   @media screen and (max-width: $breakpoint-small-mobile) {
     font-size: 1.3rem;
   }
-  &::before {
-    content: url('/abstracts/cross.svg');
-    top: 1rem;
-    left: 1.5rem;
-    position: absolute;
-    width: 2rem;
-    opacity: 0;
-    animation: slideTopWithOpacityCross 700ms forwards;
-    animation-delay: 300ms;
+
+  @media screen and (min-width: $breakpoint-mobile) {
+    &::before {
+      content: url('/abstracts/cross.svg');
+      top: 1rem;
+      right: 1.5rem;
+      position: absolute;
+      width: 2rem;
+      opacity: 0;
+      animation: slideTopWithOpacityCross 700ms forwards;
+      animation-delay: 300ms;
+    }
   }
 
   @media screen and (min-width: $breakpoint-tablet) {
-    margin: 0 auto;
-    margin-top: 2rem;
+    margin: auto;
     max-width: $breakpoint-desktop;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
+    max-height: 20rem;
     grid-template-areas:
       'title draw'
       'subtitle draw'
@@ -41,9 +44,8 @@
     &::before {
       margin-top: 0;
       left: unset;
-      right: 24px;
       bottom: unset;
-      top: 32px;
+      top: 2rem;
       width: 3vw;
     }
   }
