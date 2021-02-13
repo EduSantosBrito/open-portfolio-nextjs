@@ -40,8 +40,8 @@ const Projects: FC = (): JSX.Element => {
       <SectionTitle label='Projetos' />
       <CategoryToggle />
       <div className={styles.projects}>
-        {projects?.map(project => (
-          <ProjectItem key={project.id} project={project} />
+        {projects?.map((project, index) => (
+          <ProjectItem key={project.id} project={project} index={index} />
         ))}
       </div>
     </div>

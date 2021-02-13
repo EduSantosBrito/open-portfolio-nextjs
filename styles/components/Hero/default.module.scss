@@ -17,10 +17,13 @@
   }
   &::before {
     content: url('/abstracts/cross.svg');
-    margin-top: 16px;
-    left: 24px;
+    top: 1rem;
+    left: 1.5rem;
     position: absolute;
     width: 2rem;
+    opacity: 0;
+    animation: slideTopWithOpacityCross 700ms forwards;
+    animation-delay: 300ms;
   }
 
   @media screen and (min-width: $breakpoint-tablet) {
@@ -67,6 +70,9 @@
     left: 0;
     top: 0;
     width: 80%;
+    opacity: 0;
+    animation: fadeIn 300ms forwards;
+    animation-delay: 1500ms;
   }
   @media screen and (min-width: $breakpoint-small-mobile) {
     grid-template-columns: 1.3fr 2fr;

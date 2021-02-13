@@ -23,6 +23,7 @@
     "next": "10.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-reveal": "1.2.2",
     "sass": "1.30.0"
   },
   "devDependencies": {

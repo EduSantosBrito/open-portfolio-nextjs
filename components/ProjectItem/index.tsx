@@ -5,10 +5,12 @@ import defaultStyle from '@styles/components/ProjectItem/default.module.scss';
 import lightModeStyle from '@styles/components/ProjectItem/light.module.scss';
 import { mergeStyles } from 'merge-style-modules';
 import Image from 'next/image';
-import { FC, useMemo } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
+import Fade from 'react-reveal/Fade';
 
 type ProjectItemProps = {
   project: Project;
+  index: number;
 };
 
 const themes = {
@@ -16,7 +18,8 @@ const themes = {
   LIGHT: lightModeStyle,
 };
 
-const ProjectItem: FC<ProjectItemProps> = ({ project }): JSX.Element => {
+const ProjectItem: FC<ProjectItemProps> = ({ project, index }): JSX.Element => {
+  const [widthMatches, setWidthMatches] = useState<boolean>(false);
   const { theme } = useTheme();
 
   const styles = useMemo(() => {
@@ -24,43 +27,65 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }): JSX.Element => {
     return mergeStyles(defaultStyle, themeStyle);
   }, [theme]);
 
+  const windowMediaQuery = useMemo(() => {
+    if (typeof window !== 'undefined') {
+      return window.matchMedia('(min-width: 768px)');
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log({ windowMediaQuery });
+    if (windowMediaQuery?.matches) {
+      setWidthMatches(true);
+    }
+  }, [windowMediaQuery]);
+
+  useEffect(() => {
+    console.log({ widthMatches });
+  }, [widthMatches]);
+
   return (
-    <div className={styles.container}>
-      <img
-        className={styles.image}
-        src={project.imageUrl}
-        alt={`${project.title} project print`}
-      />
-      <div className={styles.content}>
-        <span className={styles.chip}>{project.category}</span>
-        <p className={styles.title}>{project.title}</p>
-        <p className={styles.description}>{project.description}</p>
-        <div className={styles.social}>
-          <div>
-            <Image
-              src='/icons/link.svg'
-              className={styles.icon}
-              alt='link icon'
-              unsized
-            />
-            <a className={styles.link} href={project.link}>
-              Link
-            </a>
-          </div>
-          <div>
-            <Image
-              src='/icons/behance.svg'
-              className={styles.icon}
-              alt='behance icon'
-              unsized
-            />
-            <a className={styles.link} href={project.behanceLink}>
-              Behance
-            </a>
+    <Fade
+      left={!widthMatches || index % 2 === 0}
+      right={index % 2 !== 0 && widthMatches}
+    >
+      <div className={styles.container}>
+        <img
+          className={styles.image}
+          src={project.imageUrl}
+          alt={`${project.title} project print`}
+        />
+        <div className={styles.content}>
+          <span className={styles.chip}>{project.category}</span>
+          <p className={styles.title}>{project.title}</p>
+          <p className={styles.description}>{project.description}</p>
+          <div className={styles.social}>
+            <div>
+              <Image
+                src='/icons/link.svg'
+                className={styles.icon}
+                alt='link icon'
+                unsized
+              />
+              <a className={styles.link} href={project.link}>
+                Link
+              </a>
+            </div>
+            <div>
+              <Image
+                src='/icons/behance.svg'
+                className={styles.icon}
+                alt='behance icon'
+                unsized
+              />
+              <a className={styles.link} href={project.behanceLink}>
+                Behance
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 

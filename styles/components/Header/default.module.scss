@@ -1,4 +1,5 @@
 @import '../../variables';
+@import '../../keyframes';
 
 .container {
   display: flex;
@@ -10,11 +11,13 @@
     content: url('/abstracts/bubbles.svg');
     margin-top: 1rem;
     right: 2rem;
-    bottom: 0;
     position: absolute;
     width: 3rem;
     bottom: -1.2rem;
     z-index: 1;
+    opacity: 0;
+    animation: slideTopWithOpacityBubbles 700ms forwards;
+    animation-delay: 500ms;
   }
 
   @media screen and (min-width: $breakpoint-tablet) {

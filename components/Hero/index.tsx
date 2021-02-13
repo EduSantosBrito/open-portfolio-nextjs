@@ -5,6 +5,7 @@ import defaultStyle from '@styles/components/Hero/default.module.scss';
 import lightModeStyle from '@styles/components/Hero/light.module.scss';
 import { mergeStyles } from 'merge-style-modules';
 import { FC, useEffect, useMemo, useState } from 'react';
+import Fade from 'react-reveal/Fade';
 
 const themes = {
   DARK: darkModeStyle,
@@ -51,12 +52,14 @@ const Hero: FC = (): JSX.Element => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>
-        <span className={styles.fixed}>Crio</span>
-        <div className={`${styles.dynamic} ${styles[feature.className]}`}>
-          {feature.value}
-        </div>
-      </h1>
+      <Fade left>
+        <h1 className={styles.title}>
+          <span className={styles.fixed}>Crio</span>
+          <div className={`${styles.dynamic} ${styles[feature.className]}`}>
+            {feature.value}
+          </div>
+        </h1>
+      </Fade>
       <p className={styles.subtitle}>
         Olá, meu nome é Brito sou UX/UI Designer com foco em soluções digitais
         pensando sempre na experiência do usuário.

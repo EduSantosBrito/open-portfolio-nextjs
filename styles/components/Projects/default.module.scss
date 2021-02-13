@@ -1,4 +1,5 @@
 @import '../../variables';
+@import '../../keyframes';
 
 .container {
   padding: 1.5rem;
@@ -38,6 +39,9 @@
       top: -100px;
       right: 0;
       width: 70px;
+      opacity: 0;
+      animation: slideTopTriangle 500ms forwards;
+      animation-delay: 600ms;
     }
 
     &::before {
