@@ -4,7 +4,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 65vh;
+  height: 100vh;
   position: relative;
 
   &::after {
@@ -20,8 +20,12 @@
     animation-delay: 500ms;
   }
 
+  @media screen and (min-width: $breakpoint-mobile) {
+    height: 65vh;
+  }
+
   @media screen and (min-width: $breakpoint-tablet) {
-    height: 50vh;
+    height: 80vh;
     &::after {
       right: 5rem;
       width: 6rem;
