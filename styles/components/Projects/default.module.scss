@@ -14,6 +14,7 @@
   grid-template-columns: 1fr;
   row-gap: 4rem;
   position: relative;
+  max-width: 64.5rem;
   z-index: 5;
 
   &::before {

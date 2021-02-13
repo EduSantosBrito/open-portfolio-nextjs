@@ -3,7 +3,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 65vh;
   position: relative;
 
   &::after {
@@ -18,7 +18,7 @@
   }
 
   @media screen and (min-width: $breakpoint-tablet) {
-    height: 80vh;
+    height: 50vh;
     &::after {
       right: 5rem;
       width: 6rem;

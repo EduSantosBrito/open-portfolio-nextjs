@@ -36,7 +36,7 @@ const Projects: FC = (): JSX.Element => {
   }, [theme]);
 
   return (
-    <div className={styles.container}>
+    <div id='projects' className={styles.container}>
       <SectionTitle label='Projetos' />
       <CategoryToggle />
       <div className={styles.projects}>

@@ -1,10 +1,28 @@
 @import '../../variables';
 
 .container {
-  background-color: $white-3;
+  background-color: $white-2;
 }
 
-.description {
+.title {
+  color: $gray-4;
+}
+
+.subtitle {
+  color: $gray-2;
+}
+
+.cta {
+  &::before {
+    background-color: $white-3;
+  }
+}
+
+.logo {
+  content: url('/images/logo-light.svg');
+}
+
+.linkText {
   color: $gray-2;
 }
 

@@ -1,0 +1,43 @@
+@import '../../variables';
+
+.container {
+  background-color: $gray-6;
+}
+
+.title {
+  color: $white-1;
+}
+
+.subtitle {
+  color: $gray-2;
+}
+
+.cta {
+  &::before {
+    background-color: $gray-4;
+  }
+}
+
+.logo {
+  content: url('/images/logo-dark.svg');
+}
+
+.linkText {
+  color: $gray-2;
+}
+
+.instagram {
+  content: url('/icons/instagram-dark.svg');
+}
+
+.medium {
+  content: url('/icons/medium-dark.svg');
+}
+
+.linkedin {
+  content: url('/icons/linkedin-dark.svg');
+}
+
+.youtube {
+  content: url('/icons/youtube-dark.svg');
+}
